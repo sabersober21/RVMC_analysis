@@ -2,7 +2,7 @@
 
 An independent analysis of what it would cost to buy African-made vaccines at a time-limited price premium.
 
-**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM)
+**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM) (Graduated)
 **Date:** November 2026
 **Report:** [Read the PDF](RVMC_analysis.pdf)
 
