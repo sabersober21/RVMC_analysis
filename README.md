@@ -2,8 +2,9 @@
 
 An independent analysis of what it would cost to buy African-made vaccines at a time-limited price premium.
 
-**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM) (Graduated)
+**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM) (Graduated!)
 **Date:** November 2026
+
 **Report:** [Read the PDF](RVMC_analysis.pdf)
 
 This is unsolicited work based on public data. It was written for the Regionalized Vaccine Manufacturing Collaborative (RVMC) Secretariat, but it is not affiliated with or endorsed by RVMC, CEPI, CHAI, UNICEF or Gavi.
