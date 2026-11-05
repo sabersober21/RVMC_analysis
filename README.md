@@ -94,7 +94,7 @@ The report has the full source list.
 
 ## AI assistance
 
-Prepared with AI assistance (Claude) for document review, coding and drafting.
+Prepared with AI assistance (Claude) for document review and formatting.
 
 ## Contact
 
