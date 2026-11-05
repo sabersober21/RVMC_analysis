@@ -1,0 +1,195 @@
+<title>The Price of Predictable Demand</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single-column analyst brief with a ledger-style key figure strip; tables and charts carry the argument. */
+:root{--bg:#f7f9fa;--panel:#ffffff;--ink:#14242e;--muted:#4e616d;--line:#d3dde2;--accent:#0b5c78;--s1:#2a78d6;--s2:#eb6834;--tgt:#8a9aa3;
+--h1:#e4eff9;--h2:#bcd8f3;--h3:#7fb2e8;--h4:#3f83d4;--h5:#1d5ca8;--htxt:#14242e;--htxt2:#ffffff;
+--disp:"Fraunces",Georgia,serif;--body:"Figtree",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191f;--panel:#17232b;--ink:#e8eff2;--muted:#a7b6be;--line:#2e3f49;--accent:#7cc4dd;--s1:#3987e5;--s2:#d95926;--tgt:#71828c;--h1:#1b2f40;--h2:#1f4364;--h3:#2a6199;--h4:#3a80cf;--h5:#8dbdf0;--htxt:#e8eff2;--htxt2:#10191f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10191f;--panel:#17232b;--ink:#e8eff2;--muted:#a7b6be;--line:#2e3f49;--accent:#7cc4dd;--s1:#3987e5;--s2:#d95926;--tgt:#71828c;--h1:#1b2f40;--h2:#1f4364;--h3:#2a6199;--h4:#3a80cf;--h5:#8dbdf0;--htxt:#e8eff2;--htxt2:#10191f;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+.wrap{max-width:800px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+.wrap>*{min-width:0}
+.kicker{font:500 12.5px/1.4 var(--mono);color:var(--accent);letter-spacing:.04em}
+h1{font:650 clamp(32px,6vw,46px)/1.08 var(--disp);margin:6px 0 10px;text-wrap:balance}
+.dek{font-size:18.5px;line-height:1.45;color:var(--muted);margin:0;text-wrap:pretty}
+.by{font-size:14px;color:var(--muted);margin:12px 0 0}
+h2{font:650 25px/1.2 var(--disp);margin:26px 0 0;text-wrap:balance;padding-top:18px;border-top:1px solid var(--line)}
+h3{font:600 17.5px/1.35 var(--body);margin:14px 0 0;text-wrap:balance}
+p{margin:0;max-width:68ch}ul,ol{margin:0;padding-left:20px;max-width:68ch;display:grid;gap:6px}
+a{color:var(--accent)}strong{font-weight:600}
+.answer{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px 22px;display:grid;gap:12px}
+.answer h2{border:0;margin:0;padding:0;font-size:21px}
+.keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.key{background:var(--panel);padding:14px 16px;display:grid;gap:4px;align-content:start}.key b{font:500 26px/1.1 var(--mono);color:var(--accent)}.key span{font-size:13.5px;line-height:1.4;color:var(--muted)}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;break-inside:avoid}
+figcaption{font-weight:600;font-size:15px;line-height:1.35}.note{font-size:12.5px;line-height:1.45;color:var(--muted)}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:var(--body);fill:var(--ink)}.lab{font-size:13.5px}.val{font:500 13px var(--mono)}.tick{font:400 12px var(--mono);fill:var(--muted)!important}
+.m1{fill:var(--s1)}.m2{fill:var(--s2)}.mt{fill:var(--tgt)}.grid{stroke:var(--line);stroke-width:1}.refl{stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 3}
+.s1{stroke:var(--s1);stroke-width:2}.s2{stroke:var(--s2);stroke-width:2}.ds1{fill:var(--s1);stroke:var(--panel);stroke-width:2}.ds2{fill:var(--s2);stroke:var(--panel);stroke-width:2}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.4;font-variant-numeric:tabular-nums}
+th{font-weight:600;text-align:left;color:var(--muted);vertical-align:bottom;border-bottom:1.5px solid var(--line);padding:6px 10px 6px 0}
+td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{font-weight:500}.n{text-align:right;white-space:nowrap}th.n{white-space:normal}td.nw{white-space:nowrap}.tot td{font-weight:600;border-bottom:0}
+.heat th,.heat td{padding:8px 9px;text-align:center;white-space:nowrap}.heat tbody th{text-align:left;color:var(--ink)}.heat td{font:500 13px var(--mono);border:2px solid var(--panel)}
+.h1,.h2{background:var(--h1);color:var(--htxt)}.h2{background:var(--h2)}.h3{background:var(--h3);color:var(--htxt)}.h4{background:var(--h4);color:var(--htxt2)}.h5{background:var(--h5);color:var(--htxt2)}
+.heat td.base{outline:2.5px solid var(--ink);outline-offset:-2.5px}
+.small{font-size:13.5px;line-height:1.5;color:var(--muted)}.sources{font-size:13px;line-height:1.5}.sources li{overflow-wrap:anywhere}
+@media (max-width:560px){.keys{grid-template-columns:1fr}}
+@media print{@page{size:A4;margin:15mm 14mm}body{font-size:10.5pt;background:#fff}.wrap{max-width:none;padding:0;display:block}.wrap>*{margin-bottom:10pt}p,ul,ol{max-width:none}.scroll{overflow:visible}h2{break-after:avoid}h3{break-after:avoid}table,tr{break-inside:avoid}.answer,figure{border-color:#ccd6db}}
+</style>
+<main class="wrap">
+<header>
+<div class="kicker">Independent analysis · Regional vaccine markets · November 2026</div>
+<h1>The Price of Predictable Demand</h1>
+<p class="dek">What would it cost to buy African-made vaccines at a time-limited price premium, and does that premium explain why demand remains uncommitted?</p>
+<p class="by">Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM). Written for the RVMC Secretariat. Unsolicited, and based on public data only.</p>
+</header>
+
+<section class="answer">
+<h2>The short answer</h2>
+<p>At the premium RVMC has already measured (41%), buying 30% of the eight vaccines in Africa's commercial pipeline from African manufacturers would add about <strong>US$95M a year</strong>. Allowing for uncertainty, that is US$48–267M. The base case is 18% of the US$530M a year announced for African manufacturing in 2022–24.</p>
+<p>The premium is therefore a financing decision of manageable size, unless true African costs prove far higher than the evidence so far suggests. Two other results matter more. Even winning <strong>every dose</strong> of those eight vaccines would reach only about 45% of projected demand, short of the 60% goal. And 61% of the pipeline's volume is fill-finish, which leaves the drug substance imported.</p>
+</section>
+<div class="keys">
+<div class="key"><b>$95M/yr</b><span>Premium cost at 41% premium and 30% African share of pipeline vaccines</span></div>
+<div class="key"><b>45%</b><span>Ceiling if African firms won 100% of all eight vaccines, against the 60% goal for 2040</span></div>
+<div class="key"><b>61%</b><span>Share of pipeline doses where only fill-finish is planned in Africa</span></div>
+</div>
+
+<h2>Why this question</h2>
+<p>RVMC has named predictable demand the most pressing shared challenge. Its Vision asks directly, "What is the acceptable time-limited price premium for locally manufactured vaccines?" The January 2025 Lancet commentary asks how regions should "analyse, discuss, and agree" one. I reviewed the RVMC publications and articles and did not find that number answered, for any antigen or buyer.</p>
+<p>The question is now live. Your June 2026 Nairobi call to action lists temporary price premiums among the market-shaping tools. Your July 2026 financing blog asks what makes demand credible enough to support investment. Gavi approved US$139M in July to buy African-made vaccines. A premium estimate by vaccine gives those conversations a shared starting point.</p>
+
+<h2>Method</h2>
+<p>For each vaccine: <strong>annual premium cost = 2030 African demand × reference price × premium × African share.</strong> This is deliberately simple, so that every input can be checked and replaced.</p>
+<ul>
+<li><strong>Demand:</strong> 2030 African demand for the 11 products across 8 antigens expected on the continental market by 2031 (CHAI 2026 Supply Landscape, using Linksbridge GVMM).</li>
+<li><strong>Prices:</strong> 2026 UNICEF awarded prices at the Gavi tier, the lowest price African buyers commonly face (Annex A).</li>
+<li><strong>Premium:</strong> 41%, RVMC Indicator 5.1, from 40 vaccines across regions. I tested it against Africa's one long-running price record (Finding 2).</li>
+<li><strong>Share:</strong> 30%, the level African Union heads of state asked Gavi to source from Africa in 2022.</li>
+<li><strong>Uncertainty:</strong> one-way ranges and a 200,000-draw probabilistic analysis. The ranges for premium (15–100%), share (15–50%) and demand (±20%) are my assumptions.</li>
+</ul>
+<p class="small">Analysis prepared with AI assistance (Claude) for document review, coding and drafting. Inputs, code and results are available on request and can be rerun in one command.</p>
+
+<h2>What I found</h2>
+<h3>1. The base premium is small next to what has been announced for supply</h3>
+{{T_ANTIGEN}}
+<p>The eight vaccines are worth about US$771M a year at reference prices. A 41% premium on 30% of that is US$95M, roughly 18% of announced African manufacturing investment and 16% of estimated government vaccine spending in Africa (about US$606M, from Indicator 6.1a). As a yardstick only, AVMA's US$1bn over ten years averages US$100M a year. AVMA pays for milestones and supply, so it is a measure of scale here and not a proposed source of funds.</p>
+<figure>
+<figcaption>Annual premium cost by premium and African share of the eight pipeline vaccines</figcaption>
+{{HEAT}}
+<div class="note">Outlined cell: base case. At a 30% share, a US$100M a year budget covers a premium up to 43%. At 60% it covers 22%.</div>
+</figure>
+<figure>
+<figcaption>The premium drives the result more than any other input</figcaption>
+{{FIG_TORNADO}}
+<div class="note">Annual premium cost, varying one input at a time. In the probabilistic analysis the median is US$123M (95% interval US$48–267M), above the base case because the premium range is skewed upward. It exceeds US$100M a year in 67% of draws and half of annual announced investment (US$265M) in about 3%.</div>
+</figure>
+<p>Gavi's new money offers a cross-check. US$139M for up to 70M doses implies about US$1.99 a dose, 29% above the basket's average reference price of US$1.54. The product mix is unpublished, so this is only indicative, and Gavi expects to spend it in the latter part of 2026–30 as eligible supply arrives. Volume is the sharper point: 70M doses is 14% of one year's demand for these vaccines, or under half of one year at a 30% share.</p>
+
+<h3>2. Africa's one long price record supports a premium near 35%</h3>
+<figure>
+<figcaption>Yellow fever, 10-dose vial: price per dose in UNICEF awards</figcaption>
+{{FIG_YF}}
+<div class="legend"><span><i style="background:var(--s2)"></i>Institut Pasteur de Dakar</span><span><i style="background:var(--s1)"></i>Lowest other supplier</span></div>
+<div class="note">Premium over the lowest other award: median 35%, range 29–51%, 2014–2025. One product from one established manufacturer. The 2026 column shows no Dakar 10-dose price in the January 2026 file, which may reflect timing.</div>
+</figure>
+<p>This is independent of the 41% figure and in the same range. It also shows why the comparator matters: in 2024–25 Dakar's US$1.533 sat at the bottom of Sanofi's quoted range. Dakar is a mature producer, however. New entrants at low volume could well need more, which is why the premium range runs to 100%.</p>
+
+<h3>3. The pipeline cannot reach 60%, at any price</h3>
+<figure>
+<figcaption>Doses a year: where the current pipeline can take Africa</figcaption>
+{{FIG_CEILING}}
+<div class="note">The target uses the 1.1bn doses projected for 2035 in the ASEAN white paper (Linksbridge). 2023 demand on the Hub is 1.41bn, which would lower the ceiling to 35%. Pipeline demand is for 2030, so the comparison is indicative. A published 2040 denominator would firm this up.</div>
+</figure>
+<p>Financing the premium does not close this gap. Reaching 60% needs at least 160M more doses a year from vaccines outside the current continental pipeline. CHAI also records no new continental commercialisation since 2024, with 10 transfers ongoing and 2 at regulatory filing. Decisions on the next antigens therefore have to be made soon, given the long lead times involved.</p>
+
+<h3>4. A premium buys different things depending on the vaccine</h3>
+<figure>
+<figcaption>Annual premium cost by vaccine, at 41% premium and 30% share</figcaption>
+<div class="legend"><span><i style="background:var(--s1)"></i>Fill-finish in Africa</span><span><i style="background:var(--s2)"></i>End-to-end in Africa</span></div>
+{{FIG_ANTIGEN}}
+</figure>
+<p>Drug substance would be made in Africa for only three vaccines: MR, yellow fever and cholera. They represent 39% of doses and 30% of value, and 85% of those doses rest on one institution, Institut Pasteur de Dakar, including an MR product not yet on the market. PCV, hexavalent and rotavirus account for most of the premium cost but would be filled from imported bulk, so they offer less protection if exports are restricted. A single premium figure hides this choice between industrial scale and health security.</p>
+
+<h3>5. For some buyers and products, a premium may be no premium at all</h3>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Vaccine</th><th scope="col" class="n">Gavi tier + 41%</th><th scope="col">UNICEF middle-income price, 2026</th><th scope="col">Reading</th></tr></thead>
+<tbody>
+<tr><td>PCV</td><td class="n">$2.90</td><td>PCV14 one-dose $7.01–8.90; PCV10 five-dose $4.00</td><td>Below the middle-income price</td></tr>
+<tr><td>Rotavirus</td><td class="n">$1.13</td><td>Same product $0.80 lower-middle, $1.49 upper-middle</td><td>Below for upper-middle income only</td></tr>
+<tr><td>Hexavalent</td><td class="n">$4.02</td><td>10-dose $3.00</td><td>Above: a real premium</td></tr>
+</tbody></table></div>
+<p>Vial sizes differ, so these are first-order comparisons. They suggest that middle-income African buyers outside Gavi support could be a first market for some products. This also fits CHAI's finding that export prices below domestic levels constrain continental expansion. The missing piece is how many doses those buyers purchase, which leads to the first item in my proposed work below.</p>
+
+<h2>What this suggests for RVMC</h2>
+<ol>
+<li><strong>Answer the premium question by vaccine and buyer.</strong> Publish a premium envelope on the Hub, with one row per antigen and buyer segment, in place of a single median. It gives finance ministries a number to debate.</li>
+<li><strong>Add a coverage ceiling to the Hub.</strong> Track the share of regional demand that current pipelines could serve, alongside Indicator 3.1a. It would have shown the 60% gap directly.</li>
+<li><strong>Report end-to-end and fill-finish separately.</strong> Indicator 3.1a counts both as regional supply. Separating them shows whether growth adds security or only final-stage capacity.</li>
+<li><strong>Sequence demand tools with product arrival.</strong> CHAI reports misaligned UNICEF tender and AVMA timelines. A dated map of tenders, approvals and product entry would show which windows new products would miss.</li>
+</ol>
+
+<h2>What this analysis cannot tell you</h2>
+<ul>
+<li><strong>The true cost gap.</strong> I used observed price premiums. African cost of goods at realistic volumes is not public and could be much higher. This is the biggest unknown.</li>
+<li><strong>Who pays.</strong> The model sizes the bill without allocating it among Gavi, governments and other funders. Gavi's July 2026 Board paper records a US$111M gap between increased Vaccine Budget demand and new resources, even after counting the US$139M, so there is little slack.</li>
+<li><strong>Market effects.</strong> It holds global prices fixed. New entrants may push incumbents' prices down, and Gavi 6.0 policy is already creating demand uncertainty.</li>
+<li><strong>Costs beyond price.</strong> It excludes freight, financing, regulatory and supply-reliability costs, and any value from outbreak readiness.</li>
+<li><strong>Data limits.</strong> 2026 prices are applied to 2030 demand. Indicator 5.1 rests on limited data, and manufacturer and step details for the pipeline come from a CHAI slide.</li>
+</ul>
+
+<h2>Gaps I would work on</h2>
+<p>Each of these is a gap RVMC has named. The order reflects your published deadlines: the ASEAN pilot design in the coming months, the data refresh next year and the second Status Report in 2027.</p>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Gap</th><th scope="col">Where RVMC names it</th><th scope="col">Work I would do</th><th scope="col">Output</th></tr></thead>
+<tbody>
+<tr><td>How regional is "regional" supply?</td><td>Hub, Finance & Demand: reach beyond home countries needs more information. Indicator 4.1 has no data.</td><td>Split the 29%, 25% and 1% into domestic and cross-border supply, and size middle-income buyers. First test whether WHO's 2026 MI4A file has the fields needed.</td><td>Hub module and a short brief (KPI 3.1, 4.1)</td></tr>
+<tr><td>Which vaccines should ASEAN pool first?</td><td>July 2026 blog: support design of an ASEAN pooled procurement pilot</td><td>Rerun this model on ASEAN's basket. Score vaccines on savings, regional supply and export readiness, and show the trade-off between them.</td><td>Antigen shortlist for the working group</td></tr>
+<tr><td>What premium do manufacturers actually need?</td><td>Vision: acceptable premium. July 2026 blog: how financiers assess sustainability.</td><td>Build cost bands with partners holding manufacturer data, and replace my price proxy with viability thresholds.</td><td>Premium envelope, Africa first (KPI 3.2)</td></tr>
+<tr><td>How much announced money arrived?</td><td>Hub: disbursement is unclear. Indicator 7.1 has data quality 1/3. CHAI: funds undisbursed.</td><td>Build a project-level ledger from funder disclosures, tracking announcement, disbursement and milestone.</td><td>Ledger feeding the Status Report</td></tr>
+<tr><td>Indicators with no data</td><td>Mid-term review: about one-third of indicators unreportable, including 10.1, 14.1 and 15.1</td><td>Design and pilot collection for one, starting with a legislation tracker for reliance and procurement law.</td><td>New Status Report indicator (KPI 4.1)</td></tr>
+<tr><td>What is readiness worth?</td><td>Status Report: success "not measured by cost alone". ASEAN paper: ever-warm capacity.</td><td>Model premium cost against outbreak benefit, and ask whether diseases missing from the Africa priority list, such as TB and malaria, belong there.</td><td>Journal article or policy brief</td></tr>
+</tbody></table></div>
+
+<h2>Why I am writing to you</h2>
+<p>I would like to do this work as an analyst with the Secretariat. I have not seen an open post, so I am asking for a conversation about whether there is a need, on staff or on contract, between now and the end of RVMC 2.0.</p>
+<div class="scroll"><table>
+<thead><tr><th scope="col">What the work needs</th><th scope="col">What I bring</th></tr></thead>
+<tbody>
+<tr><td>Vaccine cost and modelling evidence</td><td>Research Assistant, TB Modelling Group, LSHTM. Led a systematic review of TB vaccine economic modelling across 300+ publications, covering vaccine costs and modelling strategies.</td></tr>
+<tr><td>Outputs decision-makers can use</td><td>Worked with senior researchers to translate modelling results into decision-ready outputs for non-technical stakeholders, and contributed to Gates Foundation collaborations. Drafted briefings for senior parliamentary stakeholders at UKAPTB (volunteer).</td></tr>
+<tr><td>Health economics and statistics</td><td>MSc Control of Infectious Diseases, LSHTM. Cost-effectiveness analysis and spatial modelling of amoxicillin prescribing and influenza vaccination, which identified 4 hotspots.</td></tr>
+<tr><td>Dashboards and data pipelines</td><td>Built an interactive Mapbox dashboard of UK TB projects. Cut an image analysis pipeline from 21 days to 8 hours at NCBS. Python, R, SQL, Power BI, React.</td></tr>
+<tr><td>Practicalities</td><td>Based in London. Eligible to work in the UK on the Graduate visa, no sponsorship required. Able to travel internationally.</td></tr>
+</tbody></table></div>
+<p>I have not worked inside a vaccine manufacturer or procurement agency, and this analysis uses public data only. I would expect your team to challenge these assumptions, and I would welcome that.</p>
+<p><strong>Contact:</strong> neilay21@gmail.com</p>
+
+<h2>Annex A: Reference prices</h2>
+<p class="small">US$ per dose, 2026 unless stated. Low and high set the ranges used in the sensitivity analysis.</p>
+{{T_PRICES}}
+
+<h2>Annex B: Inconsistencies I noticed in public materials</h2>
+<p class="small">Offered in case they are useful before the next data refresh. Items 4 and 5 come from the data embedded in Hub charts, so they may differ from what a chart displays.</p>
+<ol class="small">
+<li>Hub, Finance & Demand text gives LAC 29% and ASEAN 25%. The Hub chart and Status Report give ASEAN 29% (84M of 291M) and LAC 25% (136M of 554M).</li>
+<li>The Hub text and Status Report describe two exporting large manufacturers. The Hub chart says three exporters and marks Butantan as exporting, while the Methodology table marks Butantan as domestic.</li>
+<li>Status Report text gives about US$1.1bn a year for 2021–24. The dashboard and July 2026 blog give US$1.177bn for 2022–24.</li>
+<li>ASEAN WHO-prequalified vaccines: 11 in the Status Report, 12 in the Hub chart data and 6 in the Hub manufacturer table.</li>
+<li>The Hub's Africa priority-disease detail lists pneumococcal disease twice and omits meningococcal disease, which appears in the regional comparison table.</li>
+</ol>
+
+<h2>Sources</h2>
+<ul class="sources">
+<li>RVMC: <a href="https://rvmc.net/vaccine-insights">RVM Insights Hub</a>; <a href="https://static.rvmc.net/downloads/2025-11/RVMC%20Status%20Report%20November%202025.pdf">First Status Report</a>; <a href="https://static.rvmc.net/downloads/2025-11/RVMC%20ESI%20Methodology%20Document.pdf">Methodology</a>; <a href="https://static.rvmc.net/downloads/2025-04/RVMC_Vision%20Document_April%202025.pdf">Vision</a>; <a href="https://static.rvmc.net/downloads/2026-03/RVMC%20Secretariat%20-%20Mid%20Term%20Review.pdf">Mid-Term Review</a></li>
+<li>RVMC articles: <a href="https://rvmc.net/time-regionalised-vaccine-manufacturing-has-arrived">The time for regionalised vaccine manufacturing has arrived</a>; <a href="https://rvmc.net/dialogue-delivery-building-sustainable-markets-african-made-vaccines">From Dialogue to Delivery</a>; <a href="https://rvmc.net/financing-regionalized-vaccine-manufacturing-investment-impact">From Investment to Impact</a>; <a href="https://rvmc.net/momentum-movement-what-rvmc-secretariat-has-delivered-and-what-comes-next">From Momentum to Movement</a></li>
+<li>CHAI: <a href="https://static.rvmc.net/downloads/2026-09/African-Vaccine-Manufacturing-2026-Supply-Landscape%20(2).pdf">African Vaccine Manufacturing, 2026 Supply Landscape</a>. RVMC and CHAI: <a href="https://static.rvmc.net/downloads/2026-05/RVMC%20CHAI%20Market-shaping%20strategy%20for%20a%20sustainable%20vaccine%20manufacturing%20footprint%20in%20ASEAN.pdf">ASEAN market-shaping strategy</a></li>
+<li>UNICEF: <a href="https://www.unicef.org/supply/vaccines-pricing-data">Vaccine pricing data</a> (file names listed in the analysis inputs)</li>
+<li>Gavi: <a href="https://www.gavi.org/news/media-room/gavi-propose-new-incentives-aimed-advancing-vaccine-manufacturing-africa">AVMA+ proposal, May 2026</a>; <a href="https://www.gavi.org/news/media-room/gavi-board-meeting-underlines-commitment-country-sovereignty-fragility-health-security">Board decision, July 2026</a>; <a href="https://www.gavi.org/news/document-library/07-financial-update-including-forecast-pdf-1">Financial update</a></li>
+</ul>
+</main>

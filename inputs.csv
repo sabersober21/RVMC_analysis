@@ -1,0 +1,9 @@
+antigen,african_manufacturers,step,demand_2030_m,price_low,price_ref,price_high,price_basis,unicef_price_file
+Hexa (wP),Aspen,Fill-finish,57,2.85,2.85,3.00,"SII/Serum Life Sciences 10-dose: $2.85 Gavi-eligible; $3.00 MIC",DTP-HepB-IPV-Hib-vaccine-prices-03092026.pdf
+PCV,"Aspen (PCV10), Biovac (PCV14)",Fill-finish,110,1.55,2.06,2.90,"BE PCV14 5-dose Gavi $2.06; low SII PCV10 5-dose 2027 $1.55; high GSK/SII $2.90",PCV-vaccine-prices-17062026.pdf
+MMCV,"Aspen, Biovac",Fill-finish,5,3.00,3.00,3.00,"Serum MenACWYX 5-dose $3.00 (sole listed product)",Meningitis-vaccines-prices-03122025.pdf
+Rota,Aspen,Fill-finish,97,0.50,0.80,1.35,"SII pentavalent 2-dose $0.80; low Bharat 10-dose $0.50; high Bharat liquid 5-dose $1.35",Rota-vaccines-prices-24092026.pdf
+OCV,Biovac,End-to-end,30,0.70,1.65,2.00,"EuBiologics tube $1.65; simplified $0.70-2.00",OCV-vaccines-prices-12012026.pdf
+IPV,"Biovac, Vacsera",Fill-finish,34,1.10,1.72,2.80,"UNICEF awarded weighted average 2026 $1.72; low Sinovac $1.10; high Bilthoven single dose $2.80",IPV-vaccine-prices-30042026.pdf
+YF,IPD,End-to-end,39,1.53,1.60,1.85,"10-dose $1.53-1.60; 5-dose $1.85",Yellow-Fever-vaccines-prices-15012026.pdf
+MR,IPD,End-to-end,128,0.927,0.93,1.176,"10-dose $0.927-0.936; high 5-dose $1.176",MR-vaccine-prices-05122025.pdf

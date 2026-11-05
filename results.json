@@ -1,0 +1,246 @@
+{
+ "total_doses": 500.0,
+ "basket_value": 771.0699999999999,
+ "avg_price": 1.5421399999999998,
+ "base_bill": 94.84160999999999,
+ "bill_pct_invest": 0.17894643396226412,
+ "bill_pct_gov": 0.15646557782727047,
+ "gov_spend": 606.15,
+ "five_year_bill": 474.20804999999996,
+ "breakeven_premium": {
+  "0.15": 0.8645994094786035,
+  "0.3": 0.43229970473930174,
+  "0.5": 0.259379822843581,
+  "0.6": 0.21614985236965087,
+  "1.0": 0.1296899114217905
+ },
+ "grid": {
+  "15": {
+   "15": 17.349074999999996,
+   "30": 34.69814999999999,
+   "50": 57.83024999999999,
+   "75": 86.745375,
+   "100": 115.66049999999998
+  },
+  "29": {
+   "15": 33.54154499999999,
+   "30": 67.08308999999998,
+   "50": 111.80514999999998,
+   "75": 167.70772499999998,
+   "100": 223.61029999999997
+  },
+  "41": {
+   "15": 47.420804999999994,
+   "30": 94.84160999999999,
+   "50": 158.06935,
+   "75": 237.10402499999998,
+   "100": 316.1387
+  },
+  "75": {
+   "15": 86.745375,
+   "30": 173.49075,
+   "50": 289.15125,
+   "75": 433.726875,
+   "100": 578.3025
+  },
+  "100": {
+   "15": 115.66049999999998,
+   "30": 231.32099999999997,
+   "50": 385.53499999999997,
+   "75": 578.3025,
+   "100": 771.0699999999999
+  }
+ },
+ "e2e": {
+  "doses": 197.0,
+  "share": 0.394,
+  "value": 230.94,
+  "bill_100pct": 94.68539999999999
+ },
+ "ff": {
+  "doses": 303.0,
+  "share": 0.606,
+  "value": 540.13
+ },
+ "den_2035": {
+  "pipeline_100": 0.45454545454545453,
+  "pipeline_30": 0.13636363636363635,
+  "target_60_doses": 660.0,
+  "gap_at_100": 160.0
+ },
+ "den_2023": {
+  "pipeline_100": 0.35410764872521244,
+  "pipeline_30": 0.10623229461756374,
+  "target_60_doses": 847.1999999999999,
+  "gap_at_100": 347.19999999999993
+ },
+ "avma_plus": {
+  "per_dose": 1.9857142857142858,
+  "vs_basket": 0.2876355491163487,
+  "share_of_pipeline_year": 0.14,
+  "years_of_30pct": 0.4666666666666667
+ },
+ "ten_year": {
+  "flat": 521.6288549999998,
+  "glide": 173.87628499999997
+ },
+ "tornado": {
+  "Premium 15% to 100%": [
+   34.69814999999999,
+   231.32099999999997
+  ],
+  "African share 15% to 50%": [
+   47.420804999999994,
+   158.06935
+  ],
+  "Reference prices low to high": [
+   77.88064800000001,
+   124.70084399999999
+  ],
+  "2030 demand -20% to +20%": [
+   75.87328799999999,
+   113.80993199999999
+  ]
+ },
+ "psa": {
+  "median": 123.37636795364133,
+  "p2_5": 48.29198701608276,
+  "p97_5": 266.72303119661035,
+  "p_gt_100": 0.67377,
+  "p_gt_530": 0.0,
+  "p_gt_0.5invest": 0.026365
+ },
+ "yf": {
+  "median": 0.3490672557682867,
+  "min": 0.28659793814433,
+  "max": 0.5051546391752577,
+  "by_year": {
+   "2014": 0.348,
+   "2015": 0.348,
+   "2016": 0.415,
+   "2017": 0.351,
+   "2018": 0.287,
+   "2019": 0.351,
+   "2020": 0.351,
+   "2021": 0.505,
+   "2022": 0.505,
+   "2023": 0.333,
+   "2024": 0.333,
+   "2025": 0.333
+  }
+ },
+ "antigens": [
+  {
+   "antigen": "Hexa (wP)",
+   "african_manufacturers": "Aspen",
+   "step": "Fill-finish",
+   "demand_2030_m": 57,
+   "price_low": 2.85,
+   "price_ref": 2.85,
+   "price_high": 3.0,
+   "price_basis": "SII/Serum Life Sciences 10-dose: $2.85 Gavi-eligible; $3.00 MIC",
+   "unicef_price_file": "DTP-HepB-IPV-Hib-vaccine-prices-03092026.pdf",
+   "value_m": 162.45,
+   "prem_per_dose": 1.168,
+   "bill_m": 19.981
+  },
+  {
+   "antigen": "PCV",
+   "african_manufacturers": "Aspen (PCV10), Biovac (PCV14)",
+   "step": "Fill-finish",
+   "demand_2030_m": 110,
+   "price_low": 1.55,
+   "price_ref": 2.06,
+   "price_high": 2.9,
+   "price_basis": "BE PCV14 5-dose Gavi $2.06; low SII PCV10 5-dose 2027 $1.55; high GSK/SII $2.90",
+   "unicef_price_file": "PCV-vaccine-prices-17062026.pdf",
+   "value_m": 226.6,
+   "prem_per_dose": 0.845,
+   "bill_m": 27.872
+  },
+  {
+   "antigen": "MMCV",
+   "african_manufacturers": "Aspen, Biovac",
+   "step": "Fill-finish",
+   "demand_2030_m": 5,
+   "price_low": 3.0,
+   "price_ref": 3.0,
+   "price_high": 3.0,
+   "price_basis": "Serum MenACWYX 5-dose $3.00 (sole listed product)",
+   "unicef_price_file": "Meningitis-vaccines-prices-03122025.pdf",
+   "value_m": 15.0,
+   "prem_per_dose": 1.23,
+   "bill_m": 1.845
+  },
+  {
+   "antigen": "Rota",
+   "african_manufacturers": "Aspen",
+   "step": "Fill-finish",
+   "demand_2030_m": 97,
+   "price_low": 0.5,
+   "price_ref": 0.8,
+   "price_high": 1.35,
+   "price_basis": "SII pentavalent 2-dose $0.80; low Bharat 10-dose $0.50; high Bharat liquid 5-dose $1.35",
+   "unicef_price_file": "Rota-vaccines-prices-24092026.pdf",
+   "value_m": 77.6,
+   "prem_per_dose": 0.328,
+   "bill_m": 9.545
+  },
+  {
+   "antigen": "OCV",
+   "african_manufacturers": "Biovac",
+   "step": "End-to-end",
+   "demand_2030_m": 30,
+   "price_low": 0.7,
+   "price_ref": 1.65,
+   "price_high": 2.0,
+   "price_basis": "EuBiologics tube $1.65; simplified $0.70-2.00",
+   "unicef_price_file": "OCV-vaccines-prices-12012026.pdf",
+   "value_m": 49.5,
+   "prem_per_dose": 0.676,
+   "bill_m": 6.088
+  },
+  {
+   "antigen": "IPV",
+   "african_manufacturers": "Biovac, Vacsera",
+   "step": "Fill-finish",
+   "demand_2030_m": 34,
+   "price_low": 1.1,
+   "price_ref": 1.72,
+   "price_high": 2.8,
+   "price_basis": "UNICEF awarded weighted average 2026 $1.72; low Sinovac $1.10; high Bilthoven single dose $2.80",
+   "unicef_price_file": "IPV-vaccine-prices-30042026.pdf",
+   "value_m": 58.48,
+   "prem_per_dose": 0.705,
+   "bill_m": 7.193
+  },
+  {
+   "antigen": "YF",
+   "african_manufacturers": "IPD",
+   "step": "End-to-end",
+   "demand_2030_m": 39,
+   "price_low": 1.53,
+   "price_ref": 1.6,
+   "price_high": 1.85,
+   "price_basis": "10-dose $1.53-1.60; 5-dose $1.85",
+   "unicef_price_file": "Yellow-Fever-vaccines-prices-15012026.pdf",
+   "value_m": 62.4,
+   "prem_per_dose": 0.656,
+   "bill_m": 7.675
+  },
+  {
+   "antigen": "MR",
+   "african_manufacturers": "IPD",
+   "step": "End-to-end",
+   "demand_2030_m": 128,
+   "price_low": 0.927,
+   "price_ref": 0.93,
+   "price_high": 1.176,
+   "price_basis": "10-dose $0.927-0.936; high 5-dose $1.176",
+   "unicef_price_file": "MR-vaccine-prices-05122025.pdf",
+   "value_m": 119.04,
+   "prem_per_dose": 0.381,
+   "bill_m": 14.642
+  }
+ ]
+}
