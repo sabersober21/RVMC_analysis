@@ -1,0 +1,162 @@
+<title>Who Trusts a Latin American Approval?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single-column analyst brief with a ledger-style key figure strip; tables and charts carry the argument. */
+:root{--bg:#f7f9fa;--panel:#ffffff;--ink:#14242e;--muted:#4e616d;--line:#d3dde2;--accent:#0b5c78;--s1:#2a78d6;--s2:#eb6834;--tgt:#8a9aa3;
+--h1:#e4eff9;--h2:#bcd8f3;--h3:#7fb2e8;--h4:#3f83d4;--h5:#1d5ca8;--htxt:#14242e;--htxt2:#ffffff;
+--disp:"Fraunces",Georgia,serif;--body:"Figtree",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191f;--panel:#17232b;--ink:#e8eff2;--muted:#a7b6be;--line:#2e3f49;--accent:#7cc4dd;--s1:#3987e5;--s2:#d95926;--tgt:#71828c;--h1:#1b2f40;--h2:#1f4364;--h3:#2a6199;--h4:#3a80cf;--h5:#8dbdf0;--htxt:#e8eff2;--htxt2:#10191f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10191f;--panel:#17232b;--ink:#e8eff2;--muted:#a7b6be;--line:#2e3f49;--accent:#7cc4dd;--s1:#3987e5;--s2:#d95926;--tgt:#71828c;--h1:#1b2f40;--h2:#1f4364;--h3:#2a6199;--h4:#3a80cf;--h5:#8dbdf0;--htxt:#e8eff2;--htxt2:#10191f;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+.wrap{max-width:800px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+.wrap>*{min-width:0}
+.kicker{font:500 12.5px/1.4 var(--mono);color:var(--accent);letter-spacing:.04em}
+h1{font:650 clamp(32px,6vw,46px)/1.08 var(--disp);margin:6px 0 10px;text-wrap:balance}
+.dek{font-size:18.5px;line-height:1.45;color:var(--muted);margin:0;text-wrap:pretty}
+.by{font-size:14px;color:var(--muted);margin:12px 0 0}
+h2{font:650 25px/1.2 var(--disp);margin:26px 0 0;text-wrap:balance;padding-top:18px;border-top:1px solid var(--line)}
+h3{font:600 17.5px/1.35 var(--body);margin:14px 0 0;text-wrap:balance}
+p{margin:0;max-width:68ch}ul,ol{margin:0;padding-left:20px;max-width:68ch;display:grid;gap:6px}
+a{color:var(--accent)}strong{font-weight:600}
+.answer{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px 22px;display:grid;gap:12px}
+.answer h2{border:0;margin:0;padding:0;font-size:21px}
+.keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.key{background:var(--panel);padding:14px 16px;display:grid;gap:4px;align-content:start}.key b{font:500 26px/1.1 var(--mono);color:var(--accent)}.key span{font-size:13.5px;line-height:1.4;color:var(--muted)}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;break-inside:avoid}
+figcaption{font-weight:600;font-size:15px;line-height:1.35}.note{font-size:12.5px;line-height:1.45;color:var(--muted)}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:var(--body);fill:var(--ink)}.lab{font-size:13.5px}.val{font:500 13px var(--mono)}.tick{font:400 12px var(--mono);fill:var(--muted)!important}
+.m1{fill:var(--s1)}.m2{fill:var(--s2)}.mt{fill:var(--tgt)}.grid{stroke:var(--line);stroke-width:1}.refl{stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 3}
+.s1{stroke:var(--s1);stroke-width:2}.s2{stroke:var(--s2);stroke-width:2}.ds1{fill:var(--s1);stroke:var(--panel);stroke-width:2}.ds2{fill:var(--s2);stroke:var(--panel);stroke-width:2}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.4;font-variant-numeric:tabular-nums}
+th{font-weight:600;text-align:left;color:var(--muted);vertical-align:bottom;border-bottom:1.5px solid var(--line);padding:6px 10px 6px 0}
+td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{font-weight:500}.n{text-align:right;white-space:nowrap}th.n{white-space:normal}td.nw{white-space:nowrap}.tot td{font-weight:600;border-bottom:0}
+.heat th,.heat td{padding:8px 9px;text-align:center;white-space:nowrap}.heat tbody th{text-align:left;color:var(--ink)}.heat td{font:500 13px var(--mono);border:2px solid var(--panel)}
+.h1,.h2{background:var(--h1);color:var(--htxt)}.h2{background:var(--h2)}.h3{background:var(--h3);color:var(--htxt)}.h4{background:var(--h4);color:var(--htxt2)}.h5{background:var(--h5);color:var(--htxt2)}
+.heat td.base{outline:2.5px solid var(--ink);outline-offset:-2.5px}
+.small{font-size:13.5px;line-height:1.5;color:var(--muted)}.sources{font-size:13px;line-height:1.5}.sources li{overflow-wrap:anywhere}
+@media (max-width:560px){.keys{grid-template-columns:1fr}}
+@media print{@page{size:A4;margin:15mm 14mm}body{font-size:10.5pt;background:#fff}.wrap{max-width:none;padding:0;display:block}.wrap>*{margin-bottom:10pt}p,ul,ol{max-width:none}.scroll{overflow:visible}h2{break-after:avoid}h3{break-after:avoid}table,tr{break-inside:avoid}.answer,figure{border-color:#ccd6db}}
+</style>
+<main class="wrap">
+<header>
+<div class="kicker">Independent analysis · Latin America and the Caribbean · November 2026</div>
+<h1>Who Trusts a Latin American Approval?</h1>
+<p class="dek">The regulatory and political reach of vaccines made and approved in Latin America, prepared ahead of the Regional Vaccine Production session in Panama on 12 November.</p>
+<p class="by">Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM). Written for the RVMC Secretariat. Unsolicited, and based on public data only. Companion to <em>The Price of Predictable Demand</em>.</p>
+</header>
+
+<section class="answer">
+<h2>The short answer</h2>
+<p>A vaccine approved by the US FDA or the European Medicines Agency can use national reliance pathways in countries holding <strong>86%</strong> of the region's births. An approval from Argentina's ANMAT reaches <strong>17%</strong>, and one from Cuba's CECMED 16%. Brazil's ANVISA reached 22% until Mexico opened a pathway for it in 2026, which lifted its reach to 52%.</p>
+<p>Most of the gap is a political choice written into law. Countries with 70% of the region's births already rely on foreign regulators but name only regulators from outside Latin America. Adding the region's PAHO reference regulators to those existing lists would raise the reach of each Latin American regulator to 80–87%, without building any new system.</p>
+</section>
+<div class="keys">
+<div class="key"><b>86% vs 17%</b><span>Share of LAC births reachable by reliance: FDA or EMA approval versus ANMAT approval</span></div>
+<div class="key"><b>70%</b><span>Births in countries whose reliance laws name only regulators outside the region</span></div>
+<div class="key"><b>4 of 36</b><span>LAC-made products with WHO prequalification, so most depend on national or Revolving Fund routes</span></div>
+</div>
+
+<h2>Why this question, and why now</h2>
+<p>Thursday's session aims to identify barriers and take "a first step towards a shared roadmap" for regional manufacturing. RVMC and CHAI's May 2026 strategy for the region names limited market access as one of two structural risks. It calls for reliance and harmonisation "so that a single regulatory dossier can serve multiple markets". RVMC's Status Report adds that there is no systematic tracking of the laws that enable regional manufacturing, and Indicator 10.1 (political action) has no data.</p>
+<p>This analysis puts a number on that market-access risk. It asks how many countries, and how many births, a vaccine approved by a Latin American regulator can reach through national reliance pathways, compared with one approved in the US or Europe. It focuses on registration law because that is where regulatory design and political choice meet.</p>
+
+<h2>Method</h2>
+<ul>
+<li><strong>Who relies on whom:</strong> the 2021 study by Durán and colleagues in the <em>Revista Panamericana de Salud Pública</em>. It covers 20 regulators and 34 countries, using official documents from 2019–20, and names the foreign regulators each country trusts.</li>
+<li><strong>Updates since then:</strong> Brazil's reliance rule IN 289/2024, Argentina's Decree 892/2025 and Mexico's September 2026 ANVISA pathway. The Argentine and Mexican details come from secondary sources.</li>
+<li><strong>Market size:</strong> 2023 births from World Bank data, 9.31 million across 33 countries, as a proxy for routine vaccine demand.</li>
+<li><strong>Reach:</strong> the share of births outside a regulator's home country where national law allows reliance on that regulator's approval.</li>
+</ul>
+<p class="small">Reliance shortens registration but does not guarantee it, and laws written for medicines may treat vaccines differently. Treat these figures as the legal ceiling for an abbreviated route, not as approval times. Analysis prepared with AI assistance (Claude) for document review, coding and drafting.</p>
+
+<h2>What I found</h2>
+<h3>1. The region trusts distant regulators more than its own</h3>
+<figure>
+<figcaption>Share of LAC births reachable through national reliance pathways, by the regulator that approved the vaccine</figcaption>
+<svg viewBox="0 0 720 198" role="img"><text x="238" y="19" text-anchor="end" class="lab">FDA or EMA (comparison)</text><g><title>FDA or EMA (comparison): 27 countries, 7.99M births a year (86%)</title><rect x="250" y="7" width="343.1" height="17" rx="4" class="mt"/></g><text x="601.1" y="20" class="val">86%</text><text x="238" y="51" text-anchor="end" class="lab">ANVISA, Brazil</text><g><title>ANVISA, Brazil: 21 countries, 3.51M births a year (52%)</title><rect x="250" y="39" width="209.4" height="17" rx="4" class="m1"/></g><text x="467.4" y="52" class="val">52%</text><text x="238" y="83" text-anchor="end" class="lab">ANVISA before October 2026</text><g><title>ANVISA before Mexico added it in 2026: 20 countries (22%)</title><rect x="250" y="71" width="88.0" height="17" rx="4" class="m1"/></g><text x="346.0" y="84" class="val">22%</text><text x="238" y="115" text-anchor="end" class="lab">COFEPRIS, Mexico</text><g><title>COFEPRIS, Mexico: 20 countries, 1.48M births a year (20%)</title><rect x="250" y="103" width="81.1" height="17" rx="4" class="m1"/></g><text x="339.1" y="116" class="val">20%</text><text x="238" y="147" text-anchor="end" class="lab">ANMAT, Argentina</text><g><title>ANMAT, Argentina: 20 countries, 1.48M births a year (17%)</title><rect x="250" y="135" width="67.0" height="17" rx="4" class="m1"/></g><text x="325.0" y="148" class="val">17%</text><text x="238" y="179" text-anchor="end" class="lab">CECMED, Cuba</text><g><title>CECMED, Cuba: 20 countries, 1.48M births a year (16%)</title><rect x="250" y="167" width="64.1" height="17" rx="4" class="m1"/></g><text x="322.1" y="180" class="val">16%</text></svg>
+<div class="note">Births outside the approving regulator's home country, 2023. The 14 Caribbean Regulatory System states account for most of the countries reached but only 4% of births.</div>
+</figure>
+<p>Thirteen of the 20 regulators studied accepted reliance in 2019–20, and every one of them named the FDA, EMA and Health Canada. Only seven also named PAHO's reference regulators: the Dominican Republic, Ecuador, El Salvador, Guatemala, Paraguay, Uruguay and the Caribbean Regulatory System, which covers 14 CARICOM states. Together they hold 16% of the region's births.</p>
+
+<h3>2. The region's producers face the same closed doors</h3>
+<figure>
+<figcaption>LAC births by the type of reliance their country's law allows</figcaption>
+<svg viewBox="0 0 720 102" role="img"><text x="288" y="19" text-anchor="end" class="lab">Reliance on non-regional regulators only</text><g><title>Reliance laws name FDA, EMA and similar, but no Latin American regulator: 70% of births</title><rect x="300" y="7" width="244.7" height="17" rx="4" class="m1"/></g><text x="552.7" y="20" class="val">70%</text><text x="288" y="51" text-anchor="end" class="lab">No reliance pathway (as of 2020)</text><g><title>Bolivia, Chile, Cuba, Honduras, Nicaragua, Venezuela</title><rect x="300" y="39" width="49.8" height="17" rx="4" class="m1"/></g><text x="357.8" y="52" class="val">14%</text><text x="288" y="83" text-anchor="end" class="lab">Recognise PAHO reference regulators</text><g><title>Dominican Republic, Ecuador, El Salvador, Guatemala, Paraguay, Uruguay and 14 Caribbean Regulatory System states</title><rect x="300" y="71" width="55.5" height="17" rx="4" class="m1"/></g><text x="363.5" y="84" class="val">16%</text></svg>
+</figure>
+<div class="scroll"><table><thead><tr><th scope="col">Group</th><th scope="col">Countries (births a year, thousands)</th><th scope="col" class="n">Share of LAC births</th></tr></thead><tbody><tr><td>Recognise PAHO reference regulators</td><td>Guatemala (377), Ecuador (270), Dominican Republic (203), Paraguay (137), El Salvador (99), Uruguay (33)</td><td class="n">12%</td></tr><tr><td>Reliance on non-regional regulators only</td><td>Brazil (2602), Mexico (2038) *, Colombia (705), Peru (540), Argentina (504), Panama (71), Costa Rica (52)</td><td class="n">70%</td></tr><tr><td>No reliance pathway (as of 2020)</td><td>Venezuela (427), Bolivia (260), Honduras (234), Chile (176), Nicaragua (132), Cuba (96)</td><td class="n">14%</td></tr><tr><td>Caribbean Regulatory System (recognises PAHO reference regulators)</td><td>14 CARICOM states (356 in total)</td><td class="n">4%</td></tr></tbody></table></div>
+<p class="small">* Partial recognition: Mexico accepts ANVISA from October 2026. Colombia's abbreviated pathway covers OECD members, which include Mexico and Chile, but the source study does not count it as trusting Latin American regulators.</p>
+<p>Brazil and Argentina have both widened reliance since 2020, and both named only regulators outside the region. So a vaccine made and approved in Argentina, such as Sinergium's, still needs a full national review to be registered in Brazil, and the reverse is also true. Mexico's 2026 decision to rely on ANVISA is the only reform I found that names a Latin American regulator.</p>
+
+<h3>3. A legal amendment would change the picture more than any new institution</h3>
+<figure>
+<figcaption>Reach today and if existing reliance lists added PAHO's reference regulators</figcaption>
+<div class="legend"><span><i style="background:var(--s1)"></i>Today</span><span><i style="background:var(--s2)"></i>If lists were amended</span></div>
+<svg viewBox="0 0 720 212" role="img"><text x="158" y="26" text-anchor="end" class="lab">ANVISA</text><g><title>ANVISA, Today: 52% of births</title><rect x="170" y="6" width="251.3" height="16" rx="4" class="m1"/></g><text x="429.3" y="19" class="val">52%</text><g><title>ANVISA, If reliance lists added PAHO reference regulators: 80% of births</title><rect x="170" y="26" width="385.2" height="16" rx="4" class="m2"/></g><text x="563.2" y="39" class="val">80%</text><text x="158" y="78" text-anchor="end" class="lab">COFEPRIS</text><g><title>COFEPRIS, Today: 20% of births</title><rect x="170" y="58" width="97.4" height="16" rx="4" class="m1"/></g><text x="275.4" y="71" class="val">20%</text><g><title>COFEPRIS, If reliance lists added PAHO reference regulators: 82% of births</title><rect x="170" y="78" width="392.6" height="16" rx="4" class="m2"/></g><text x="570.6" y="91" class="val">82%</text><text x="158" y="130" text-anchor="end" class="lab">ANMAT</text><g><title>ANMAT, Today: 17% of births</title><rect x="170" y="110" width="80.4" height="16" rx="4" class="m1"/></g><text x="258.4" y="123" class="val">17%</text><g><title>ANMAT, If reliance lists added PAHO reference regulators: 85% of births</title><rect x="170" y="130" width="407.8" height="16" rx="4" class="m2"/></g><text x="585.8" y="143" class="val">85%</text><text x="158" y="182" text-anchor="end" class="lab">CECMED</text><g><title>CECMED, Today: 16% of births</title><rect x="170" y="162" width="76.9" height="16" rx="4" class="m1"/></g><text x="254.9" y="175" class="val">16%</text><g><title>CECMED, If reliance lists added PAHO reference regulators: 87% of births</title><rect x="170" y="182" width="416.0" height="16" rx="4" class="m2"/></g><text x="594.0" y="195" class="val">87%</text></svg>
+<div class="note">The amended scenario assumes every country with a reliance pathway adds the region's reference regulators. It excludes Bolivia, Chile, Cuba, Honduras, Nicaragua and Venezuela, which had no reliance pathway in 2020.</div>
+</figure>
+<p>This is a lever for finance and health ministers, not only regulators. Each country that already relies on foreign approvals could extend its list by decree or regulation. Bilateral steps such as Mexico and Brazil's show this can move faster than region-wide harmonisation, which is consistent with RVMC's view that progress can build from a few willing countries.</p>
+
+<h3>4. The Revolving Fund route is wider, but its fine print matters</h3>
+<p>PAHO's Revolving Fund accepts vaccines that are WHO-prequalified or approved by a functional national regulator for vaccines. Its published list includes ANVISA, ANMAT, CECMED and COFEPRIS. This matters because only 4 of the 36 LAC-made products counted in RVMC's Status Report have WHO prequalification. The Fund pooled about 60% of regional demand in 2022–24, according to the RVMC and CHAI strategy.</p>
+<p>Two limits remain. Brazil and Mexico, with half the region's births, mostly buy outside the Fund. I also could not find a public, country-by-country statement of whether vaccines bought through the Fund still need national registration before use. That rule decides whether the Fund route really bypasses the reliance gap.</p>
+
+<h3>5. Political shifts are reaching the regulators</h3>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Why it matters for regional supply</th></tr></thead>
+<tbody>
+<tr><td class="nw">Apr 2024</td><td>Brazil's reliance rule IN 289/2024 takes effect</td><td>Brazil starts relying on foreign regulators, but none in the region</td></tr>
+<tr><td class="nw">2025</td><td>ANVISA and COFEPRIS sign a memorandum of understanding</td><td>Groundwork for the first bilateral reliance step between the two largest markets</td></tr>
+<tr><td class="nw">2025</td><td>Argentina's Decree 892/2025 widens recognition of foreign regulators</td><td>The trusted list named in coverage is from outside the region</td></tr>
+<tr><td class="nw">17 Mar 2026</td><td>Argentina's withdrawal from WHO takes effect; it remains in PAHO</td><td>WHO runs prequalification and the WHO Listed Authorities framework. ANMAT oversees Sinergium, which supplies PCV20 to PAHO member states.</td></tr>
+<tr><td class="nw">Jun 2026</td><td>ANMAT hosts PAHO's reference regulators in Buenos Aires as pro tempore chair</td><td>Regional regulatory cooperation continues despite Argentina's WHO exit</td></tr>
+<tr><td class="nw">Sep 2026</td><td>Mexico publishes a pathway relying on ANVISA, in effect from 15 October</td><td>The first reliance link between the region's two largest markets</td></tr>
+</tbody></table></div>
+<p>The strategy for the region already flags that PAHO's move from national regulators of reference toward WHO Listed Authorities "will introduce adaptation challenges". Argentina's exit adds an open question: how WHO-run assessments of ANMAT will work from now on. I could not find a public answer, and it bears directly on regional supply that depends on Argentine approvals.</p>
+
+<h2>Questions this raises for Thursday's panel</h2>
+<ol>
+<li><strong>For PAHO's Revolving Fund:</strong> which member states still require national registration for vaccines bought through the Fund, and could the Fund publish that list?</li>
+<li><strong>For UNICEF Supply Division:</strong> how will prequalification work for products overseen by ANMAT now that Argentina has left WHO?</li>
+<li><strong>For Gavi:</strong> as countries move out of Gavi support and buy for themselves, will their reliance lists affect which regionally made vaccines they can register?</li>
+<li><strong>For the roadmap:</strong> could adding PAHO's reference regulators to existing reliance lists be an early, measurable commitment for each country?</li>
+</ol>
+
+<h2>What this analysis cannot tell you</h2>
+<ul>
+<li><strong>Current law in every country.</strong> The baseline is from 2019–20. I updated Brazil, Argentina and Mexico only, and the Argentine and Mexican details come from secondary sources. Chile, Colombia, Peru and others may have changed.</li>
+<li><strong>Vaccines specifically.</strong> The source study covers new medicines. Vaccine rules, and exceptions for vaccines bought through PAHO or UNICEF, may differ.</li>
+<li><strong>The Caribbean.</strong> The source study says the Caribbean Regulatory System relies on PAHO's reference regulators, but does not name its designated trusted authority.</li>
+<li><strong>Practice.</strong> A legal pathway does not mean fast approval. Actual timelines would need regulator data.</li>
+<li><strong>Market size.</strong> Births are a proxy for routine vaccine demand. Adult and campaign vaccines follow other patterns.</li>
+</ul>
+
+<h2>Gaps I would work on</h2>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Gap</th><th scope="col">Where RVMC names it</th><th scope="col">Work I would do</th></tr></thead>
+<tbody>
+<tr><td>Reliance tracker for 2026</td><td>Status Report: no systematic tracking of enabling laws. Indicator 10.1 has no data.</td><td>Update this table for all 33 countries with regulators' confirmation, vaccine-specific rules and the date of each change. It could become Indicator 10.1 for LAC in the second Status Report.</td></tr>
+<tr><td>Registration of Fund-procured vaccines</td><td>RVMC and CHAI strategy: use the Fund as the aggregation channel</td><td>Map which countries waive or require registration for vaccines bought through the Fund or UNICEF.</td></tr>
+<tr><td>Approval times in practice</td><td>Status Report: approval-time data are limited and unsystematic (Indicator 9.1)</td><td>Collect registration dates for regionally made vaccines in each country to measure real time to market.</td></tr>
+<tr><td>Effects of the shift to WHO Listed Authorities</td><td>RVMC and CHAI strategy: the transition will bring adaptation challenges</td><td>Map which regional supply agreements depend on each regulator's status, starting with Argentina.</td></tr>
+<tr><td>Who decides across ministries</td><td>RVMC and CHAI strategy: examine governance across health, industry, trade and finance</td><td>Profile, for each producing country, which ministry controls procurement, registration and industrial incentives.</td></tr>
+</tbody></table></div>
+
+<h2>About me</h2>
+<p>I am an MSc graduate of the London School of Hygiene &amp; Tropical Medicine. As a Research Assistant in LSHTM's TB Modelling Group, I led a systematic review of TB vaccine economic modelling across 300+ publications. As a volunteer communications lead at UKAPTB, I drafted briefings for senior parliamentary stakeholders. This is the second of two analyses I have prepared for RVMC. The first, on the cost of a price premium for African-made vaccines, is available on request. I am based in London, need no visa sponsorship, and would welcome a conversation about analyst support for the Secretariat.</p>
+<p><strong>Contact:</strong> neilay21@gmail.com</p>
+
+<h2>Sources</h2>
+<ul class="sources">
+<li>Durán CE et al. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8040933/">Regulatory reliance to approve new medicinal products in Latin American and Caribbean countries</a>. Rev Panam Salud Publica 2021;45:e10</li>
+<li>RVMC and CHAI: <a href="https://static.rvmc.net/downloads/2026-05/RVMC%20CHAI%20Market-shaping%20strategy%20for%20a%20sustainable%20vaccine%20manufacturing%20footprint%20in%20Latin%20America%20and%20the%20Caribbean.pdf">Market-shaping strategy for LAC</a> (May 2026). RVMC: <a href="https://static.rvmc.net/downloads/2025-11/RVMC%20Status%20Report%20November%202025.pdf">First Status Report</a></li>
+<li>PAHO: <a href="https://www.paho.org/en/topics/quality-assurance-health-technologies">Quality assurance of health technologies</a> (Revolving Fund eligibility); <a href="https://www.paho.org/en/news/26-6-2026-regulatory-authorities-americas-meet-argentina-strengthen-regional-cooperation">Reference regulators meet in Argentina</a>, June 2026</li>
+<li>ANVISA: <a href="https://www.gov.br/anvisa/en/updates/anvisa-published-normative-instruction-in-289-2024-and-guidelines-on-regulatory-reliance">IN 289/2024 on regulatory reliance</a>; <a href="https://www.freyrsolutions.com/what-is-anvisas-reliance-pathway-for-biologics">summary of designated authorities</a> (secondary)</li>
+<li>Mexico: <a href="https://trial.medpath.com/news/mexico-and-brazil-advance-drug-registration-pathway-based-on-anvisa">COFEPRIS pathway based on ANVISA</a>, September 2026 (secondary). Argentina: <a href="https://www.eaduana.com/articulos/nuevo-regimen-anmat-2025-reconocimiento-internacional-de-certificaciones-y-cambios-en">Decree 892/2025</a> (secondary)</li>
+<li>Argentina and WHO: <a href="https://www.aljazeera.com/news/2026/3/17/argentina-officially-withdraws-from-world-health-organization-following-us">Al Jazeera</a>; <a href="https://en.mercopress.com/2026/03/17/argentina-officially-withdraws-from-the-who-how-will-this-affect-the-country">MercoPress</a></li>
+<li>Births: World Bank, crude birth rate and population, 2023. Session: <a href="https://ghc2026.netlify.app/en/program">Global Health Conference of the Americas 2026 programme</a></li>
+</ul>
+</main>

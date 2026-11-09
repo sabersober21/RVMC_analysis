@@ -1,0 +1,34 @@
+iso3,country,crs_member,reliance_any,recognises_paho_reference,lac_partial,status_source,note
+ARG,Argentina,0,1,0,,Decree 150/1992 (Duran 2021); Decree 892/2025 (secondary source),Trusted list: high-surveillance countries; no Latin American regulator named
+BRA,Brazil,0,1,0,,No reliance in 2020 (Duran 2021); IN 289/2024 (ANVISA),Equivalent authorities: EMA FDA WHO Health Canada MHRA Swissmedic TGA PMDA
+MEX,Mexico,0,1,0,ANVISA,2012 equivalence agreements (Duran 2021); ANVISA pathway published Sep 2026 (secondary sources),ANVISA added for medicines incl. vaccines from 15 Oct 2026 per secondary sources
+COL,Colombia,0,1,0,,Decree 677/1995; Decree 1782/2014 (Duran 2021),Abbreviated pathway for OECD members; Duran 2021 does not treat it as trusting LAC regulators
+CRI,Costa Rica,0,1,0,,Executive Decree 39433-S 2015 (Duran 2021),
+PAN,Panama,0,1,0,,Executive Decree 58/2017; Law 97/2019 (Duran 2021),
+PER,Peru,0,1,0,,Law 29459; SD 016-2011-SA; SD 018-2019-SA (Duran 2021),
+DOM,Dominican Republic,0,1,1,,Decree 246-06; resolutions 2016-17 (Duran 2021),
+ECU,Ecuador,0,1,1,,Agreement 2883/2013; 385-2019 (Duran 2021),Reliance restricted to essential-medicines-list products
+SLV,El Salvador,0,1,1,,Decree 34/2013 (Duran 2021),
+GTM,Guatemala,0,1,1,,Technical norms 077-2018; 67-2019 (Duran 2021),
+PRY,Paraguay,0,1,1,,Law 1119/1997; Decree 6611/2016 (Duran 2021),Also MERCOSUR members
+URY,Uruguay,0,1,1,,Decree 28/014; Decree 38/015 (Duran 2021),
+BOL,Bolivia,0,0,0,,Law 1737; SD 25235 (Duran 2021),
+CHL,Chile,0,0,0,,SD 3/10 (Duran 2021),Not updated since 2020 in this analysis
+CUB,Cuba,0,0,0,,MR 321/2009 (Duran 2021),
+HND,Honduras,0,0,0,,Agreement 06/2005 (Duran 2021),
+NIC,Nicaragua,0,0,0,,Law 292/1998 (Duran 2021),
+VEN,Venezuela,0,0,0,,Medicines Law 2000 (Duran 2021),
+ATG,Antigua and Barbuda,1,1,1,,Caribbean Regulatory System (Duran 2021),"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+BHS,Bahamas,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+BRB,Barbados,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+BLZ,Belize,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+DMA,Dominica,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+GRD,Grenada,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+GUY,Guyana,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+HTI,Haiti,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+JAM,Jamaica,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+KNA,Saint Kitts and Nevis,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+LCA,Saint Lucia,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+VCT,Saint Vincent and the Grenadines,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+SUR,Suriname,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
+TTO,Trinidad and Tobago,1,1,1,,Caribbean Regulatory System,"CRS relies on EMA, FDA, Health Canada and PAHO reference authorities (Duran 2021)"
