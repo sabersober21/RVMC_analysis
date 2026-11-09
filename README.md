@@ -2,7 +2,7 @@
 
 Independent analyses of the barriers to regional vaccine manufacturing, one region per folder. Each one asks a single question that the Regionalized Vaccine Manufacturing Collaborative (RVMC) has raised but not yet answered, and answers it with public data.
 
-**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM)
+**Author:** Neilay Bhalerao, MSc Control of Infectious Diseases (LSHTM) [Graduated!]
 **Contact:** neilay21@gmail.com
 
 This is unsolicited work based on public data. It is not affiliated with or endorsed by RVMC, CEPI, CHAI, PAHO, UNICEF or Gavi.
